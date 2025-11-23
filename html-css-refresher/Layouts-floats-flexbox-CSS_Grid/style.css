@@ -1,3 +1,10 @@
+/* change log 
+   container width changed to 1200px from 800px
+   article element introduce a left float, width 875px
+   aside element introduce a right float, width 300px
+   footer element clear both float to remain on it's "inflow" position
+*/
+
 * {
   /* border-top: 10px solid #1098ad; */
   margin: 0;
@@ -14,7 +21,7 @@ body {
 }
 
 .container {
-  width: 800px;
+  width: 1200px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
@@ -296,4 +303,21 @@ nav {
   clear: both;
   content: "";
   display: block;
+}
+
+article {
+  /* background-color: green; */
+  float: left;
+  width: 825px;
+}
+
+aside {
+  /* background-color: red; */
+  float: right;
+  width: 300px;
+}
+
+footer {
+  /* background-color: yellow; */
+  clear: both;
 }
