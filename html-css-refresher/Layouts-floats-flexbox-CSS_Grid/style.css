@@ -90,6 +90,7 @@ h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 p {
@@ -206,7 +207,7 @@ nav a:link {
   display: block; */
 
   margin-right: 30px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   display: inline-block;
 }
 
@@ -274,7 +275,7 @@ footer p {
 nav p {
   font-size: 18px;
 } */
-
+/* 
 .author-img {
   float: left;
   margin-bottom: 20px;
@@ -296,30 +297,74 @@ nav {
 
 /* Clear float fix */
 /* Option 1 */
-.clear {
+/*.clear {
   clear: both;
 }
 
 /* Option 2 clearfix*/
-.clearfix::after {
+/*.clearfix::after {
   clear: both;
   content: "";
   display: block;
 }
 
 article {
-  /* background-color: green; */
+  
   float: left;
   width: 825px;
 }
 
 aside {
-  /* background-color: red; */
+  
   float: right;
   width: 300px;
 }
 
 footer {
-  /* background-color: yellow; */
+  
   clear: both;
+} */
+
+/* Change log: FLEXBOX */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.author-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+.blog-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+}
+.blog-content-article {
+  flex: 1;
+}
+.blog-content-aside {
+  flex: 0 0 300px;
+}
+
+.related-list {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.related-author {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 14px;
+}
+.related-link:link {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 16px;
 }
