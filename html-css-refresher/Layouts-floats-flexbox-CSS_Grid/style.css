@@ -28,6 +28,7 @@ body {
   width: 1200px;
   /* margin-left: auto;
   margin-right: auto; */
+  /* change log : Grid display practice */
   margin: 0 auto;
 }
 
@@ -37,7 +38,7 @@ body {
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* height: 80px; */
 }
 
@@ -47,7 +48,7 @@ nav {
 }
 
 article {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .post-header {
@@ -340,7 +341,8 @@ footer {
   margin-bottom: 0;
   margin-left: 15px;
 }
-.blog-content {
+/* Change log: Grid layout use case */
+/* .blog-content {
   display: flex;
   align-items: flex-start;
   gap: 75px;
@@ -350,7 +352,7 @@ footer {
 }
 .blog-content-aside {
   flex: 0 0 300px;
-}
+} */
 
 .related-list {
   display: flex;
@@ -367,4 +369,16 @@ footer {
   font-weight: bold;
   font-style: normal;
   font-size: 16px;
+}
+/* Change log: Grid layout use case */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+.main-header {
+  grid-column: 1 / -1;
 }
