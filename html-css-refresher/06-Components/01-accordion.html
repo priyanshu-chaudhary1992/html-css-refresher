@@ -42,15 +42,26 @@
       .accordion {
         width: 700px;
         margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
       }
 
       .item {
+        box-shadow: 0 0 32px rgb(0, 0, 0, 0.1);
+        padding: 24px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 12px;
+        row-gap: 24px;
+
+        align-items: center;
       }
       .number,
       .text {
         font-size: 24px;
         font-weight: 500;
-        color: #087f5b;
+        /*color: #087f5b;*/
       }
 
       .icon {
@@ -59,6 +70,8 @@
         stroke: #087f5b;
       }
       .hidden-box {
+        grid-column: 2;
+        display: none;
       }
       .hidden-box p {
         line-height: 1.6;
@@ -70,13 +83,74 @@
 
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 16px;
+      }
+      .number {
+        color: #ced4da;
+      }
+      .open {
+        border-top: 4px solid #087f5b;
+      }
+      .open .hidden-box {
+        display: block;
+      }
+
+      .open .number,
+      .open .text {
+        color: #087f5b;
       }
     </style>
   </head>
   <body>
     <div class="accordion">
       <div class="item">
+        <p class="number">01</p>
+        <p class="text">Where are these chairs assembled?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod.
+            </li>
+            <li>
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo.
+            </li>
+            <li>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia.
+            </li>
+            <li>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="item open">
         <p class="number">02</p>
         <p class="text">How long do I have to return my chair?</p>
         <svg
@@ -103,18 +177,69 @@
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <ul class="list">
+          <ul>
             <li>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore
+              eiusmod.
             </li>
             <li>
               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat.
+              commodo.
             </li>
             <li>
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
+              officia.
+            </li>
+            <li>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="item">
+        <p class="number">03</p>
+        <p class="text">Do you ship to countries outside the EU?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m19.5 8.25-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod.
+            </li>
+            <li>
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo.
+            </li>
+            <li>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia.
+            </li>
+            <li>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore.
             </li>
           </ul>
         </div>
